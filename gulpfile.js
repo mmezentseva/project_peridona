@@ -10,10 +10,12 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
+sass.compiler = require('node-sass');
+
 const styleFiles = [
     './src/css/main.scss',
     './src/css/media.scss'
-] 
+]
 
 const jsFiles = [
     './src/js/lib.js',
@@ -25,7 +27,6 @@ gulp.task('styles', () => {
     return gulp.src(styleFiles)
     .pipe(sourcemaps.init())
     .pipe(sass())
-
     .pipe(concat('style.css'))
     //Добавить префиксы
     .pipe(autoprefixer({
