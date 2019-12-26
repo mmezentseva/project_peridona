@@ -4,13 +4,11 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
-// const del = require('del');
+const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
-
-sass.compiler = require('node-sass');
 
 const styleFiles = [
     './src/css/main.scss',
@@ -26,7 +24,7 @@ const jsFiles = [
 gulp.task('styles', () => {
     return gulp.src(styleFiles)
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(concat('style.css'))
     //Добавить префиксы
     .pipe(autoprefixer({
@@ -59,10 +57,10 @@ gulp.task('scripts', () => {
     .pipe(browserSync.stream());
 });
 
-//Удалить всё в указанной папке
-// gulp.task('del', () => {
-    // return del(['build/*'])
-// });
+// Удалить всё в указанной папке
+gulp.task('del', () => {
+    return del(['build/*'])
+});
 
 gulp.task('img-compress', ()=> {
     return gulp.src('./src/img/**')
