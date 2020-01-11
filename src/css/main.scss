@@ -135,19 +135,29 @@ h4 {
         display: block;
         width: 116px;
         height: 27px;
+        margin-top: -14px;
+    }
+    &__btn {
+        display: none;
+        position: absolute;
+        right: 20px;
+        &>span {
+            display: block;
+            margin: 6px;
+            width: 40px;
+            height: 3px;
+            background: #333;
+        }
+        &:hover > span {
+            background: $hover-color;
+        }
     }
     &-list {
         display: flex;
         justify-content: flex-end;
         list-style: none;
-
-        @media (max-width: 900px) {
-            flex-wrap: wrap;
-            width: 70%;
-        }  
-
         &__item {
-            padding-left: 45px;
+            padding-left: 30px;
             &>a {
                 color: $title-color;
                 display: inline-block;
@@ -158,11 +168,50 @@ h4 {
                 &:hover {
                     color: $hover-color;
                     transition: .3s;
-                }
-            }         
+                }        
+            }
         }
     }
 }
+
+@media only screen and (max-width: 750px) {
+    .header {
+      overflow: visible;
+    }
+    .header-list {
+      display: block;
+      position: absolute;
+      width: 100%;
+      right: 0;
+      top: 70px;
+      background: #f1f1f1;
+      overflow: hidden;
+      max-height: 0;
+      z-index: 2;
+    }
+    .header-list a {
+      display: block;
+      text-align: center;
+      padding: 8px;
+      margin: 0;
+      text-decoration: none;
+      color: $title-color;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      &:hover {
+          color: $hover-color;
+          transition: 0.3s;
+      }
+    }
+    .header__btn {
+      display: block;
+      cursor: pointer;
+    }
+    .show {
+      max-height: 500px;
+    }
+  }
 
 .page-main {
     background-image: url("/build/img/bg/city.jpg");
@@ -1307,6 +1356,7 @@ h4 {
                 color: $title-color;
                 font-size: 18px;
                 font-weight: 500;
+                position: relative;
                 &>img {
                     object-fit: contain;
                     margin-right: 25px;
@@ -1324,19 +1374,15 @@ h4 {
             background-color: $title-color;
             color: $light-color;   
         }
-        &-item:hover {
-            background-color: $title-color;
-            color: $light-color; 
-            transition: .5s;
-        }
-        &-item:hover .about-content-item__title{
-            color: $light-color; 
-            transition: .3s;
-        }
-        &-item:hover .about-content-item__img {
-            filter: brightness(5%);
-            transition: .3s;
-        }
+        // &-item:hover {
+            // background-color: $title-color;
+            // color: $light-color; 
+            // transition: .5s;
+        // }
+        // &-item:hover .about-content-item__title{
+            // color: $light-color; 
+            // transition: .3s;
+        // }
     }
 }
 
