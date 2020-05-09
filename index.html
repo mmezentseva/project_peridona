@@ -18,11 +18,12 @@
                 <a href="" class="header__logo">
                     <img src="build/img/logos/logo.svg" alt="логотип">
                 </a>
-                <a class="header__btn">
+                <input type="checkbox" id="check">
+                <label for="check" class="header__btn show-menu-btn">
                     <span></span>
                     <span></span>
                     <span></span>
-                </a>
+                </label>
                 <ul class="header-list">
                     <li class="header-list__item"><a href="">home</a></li>
                     <li class="header-list__item"><a href="">about us</a></li>
@@ -30,9 +31,13 @@
                     <li class="header-list__item"><a href="">blog</a></li>
                     <li class="header-list__item"><a href="">team</a></li>
                     <li class="header-list__item"><a href="">contact</a></li>
+                    <label for="check" class="hide-menu-btn">
+                        <img src="build/img/icons/close-blue.svg">
+                    </label>
                 </ul>
             </div>
     </header>
+
     <section class="page-main">
         <div class="contacts">
             <span class="contacts__hours">
@@ -42,20 +47,10 @@
             <a href="" class="contacts__phone">
                 <img src="build/img/icons/phone.svg" alt="icon">(555) 5678 12340</a>
         </div>
-        <div class="wrap">
+        <div class="wrap-main">
             <div class="top-content">
                 <div class="top-content-image">
                     <img src="build/img/bg/building.jpg" alt="photo">
-                    <div class="top-content-partners">
-                        <a class="top-content-partners__logo" href="">
-                            <img src="build/img/logos/logo_1.png" alt="logo"></a>
-                        <a class="top-content-partners__logo" href="">
-                            <img src="build/img/logos/logo_2.png" alt="logo"></a>
-                        <a class="top-content-partners__logo" href="">
-                            <img src="build/img/logos/logo_3.png" alt="logo"></a>
-                        <a class="top-content-partners__logo" href="">
-                            <img src="build/img/logos/logo_4.png" alt="logo"></a>
-                    </div> 
                 </div>
                 <div class="top-content-text">
                     <h1 class="top-content-text__title">We are Providing Be Business Service</h1>
@@ -65,17 +60,40 @@
                         <button>Our Services</button>
                         <button>Contact Us</button>
                     </div>
-                    <div class="top-content-adaptive">
-                        <a class="top-content-adaptive__logo" href=""><img src="build/img/logos/logo_1.png" alt="logo"></a>
-                        <a class="top-content-adaptive__logo" href=""><img src="build/img/logos/logo_2.png" alt="logo"></a>
-                        <a class="top-content-adaptive__logo" href=""><img src="build/img/logos/logo_3.png" alt="logo"></a>
-                        <a class="top-content-adaptive__logo" href=""><img src="build/img/logos/logo_4.png" alt="logo"></a>
-                    </div>
                 </div>
+                <div class="top-content-partners">
+                    <a class="top-content-partners__logo" href="">
+                        <img src="build/img/logos/logo_1.png" alt="logo">
+                    </a>
+                    <a class="top-content-partners__logo" href="">
+                        <img src="build/img/logos/logo_2.png" alt="logo">
+                    </a>
+                    <a class="top-content-partners__logo" href="">
+                        <img src="build/img/logos/logo_3.png" alt="logo">
+                    </a>
+                    <a class="top-content-partners__logo" href="">
+                        <img src="build/img/logos/logo_4.png" alt="logo">
+                    </a>
+                </div>       
             </div>
         </div>
-    </section>
 
+        <div class="top-content__adaptiv">
+            <a class="top-content__adaptiv-logo" href="">
+                <img src="build/img/logos/logo_1.png" alt="logo">
+            </a>
+            <a class="top-content__adaptiv-logo" href="">
+                <img src="build/img/logos/logo_2.png" alt="logo">
+            </a>
+            <a class="top-content__adaptiv-logo" href="">
+                <img src="build/img/logos/logo_3.png" alt="logo">
+            </a>
+            <a class="top-content__adaptiv-logo" href="">
+                <img src="build/img/logos/logo_4.png" alt="logo">
+            </a>
+        </div>   
+    </section>
+ 
     <section class="page page-different">
         <div class="wrap">
             <div class="different">
